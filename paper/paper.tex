@@ -36,6 +36,7 @@
 
 \usepackage{balance}
 \usepackage{subcaption}
+\usepackage{nth}
 
 \begin{document}
 
@@ -48,11 +49,11 @@
 \email{curt.polack@tum.de}
 
 \begin{abstract}
-	In this paper, we re-implement a work published in proceedings of the 20th International Conference for Passive and Active Measurement (PAM) in 2019: ``Web Performance Pitfalls''. The paper used a number of web-scraping and performance evaluation tools to perform measurements of ca. 2000 popular websites. These measurements were used to demonstrate and evaluate differences in measurements by tool, standard, etc. that can cause different and possibly misleading results in papers that examine web performance.
+	In this paper, I re-implement a work published in the proceedings of the \nth{20} International Conference for Passive and Active Measurement (PAM) in 2019: ``Web Performance Pitfalls''. The paper used a number of web-scraping and performance evaluation tools to perform measurements of ca. 2000 popular websites. These measurements were used to demonstrate and evaluate differences in measurements by tool, standard, etc. that can cause different and possibly misleading results in papers that examine web performance.
 	
 	This paper details the process of reproducing the original results and conclusions using the data and scripts provided in the original paper. It also details the use of the aforementioned scripts to perform a new set of measurements for ca. 1000 popular websites. The difficulties of obtaining new measurements and their results are expounded upon and the results compared with those of the original paper.
 	
-	The original data provided produced results that coincide with the results and plots in the original paper. The measurement scripts provided for Chrome and Firefox with Selenium did not work in either the environment used in the original paper or in a modern Linux environment. The measurements that were collected using Firefox with Marionette and analyzed by the scripts provided did, however, generate similar results to those produced by the original data regarding two major web performance metrics: load time and number of objects. The new measurement's results did not correspond to those of the original dataset regarding object counts. 
+	The original data provided produced results that coincide with the results and plots in the original paper. The measurement scripts provided for Chrome and Firefox with Selenium did not work in either the environment used in the original paper or in a modern Linux environment. The measurements that were collected using Firefox with Marionette and analyzed by the scripts provided did, however, generate similar results to those produced by the original data regarding two major web performance metrics: load time and number of objects. The new measurements' results did not correspond to those of the original dataset regarding object sizes. 
 \end{abstract}
 
 \begin{CCSXML}
