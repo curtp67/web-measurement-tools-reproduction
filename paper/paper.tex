@@ -1,0 +1,107 @@
+\documentclass[sigconf]{acmart}
+
+% Disable / remove copyright boxes
+\setcopyright{none}
+\settopmatter{printacmref=false}
+\renewcommand\footnotetextcopyrightpermission[1]{}
+
+% Increase margin between text and footer
+\setlength{\footskip}{20pt}
+
+% Add CCR footer
+\usepackage{fancyhdr}
+\fancypagestyle{plain}{%
+   \fancyhf{} %
+   \fancyfoot[L]{Master Practical Course: Internet Measurements and Reproducibility Lab}%
+   \fancyfoot[R]{Winter Semester 2020/21}%
+}
+\pagestyle{plain}
+
+% Add CCR footer on first page
+\fancypagestyle{firstpagestyle}{%
+   \fancyhf{} %
+   \fancyfoot[L]{Internet Measurements and Reproducibility Lab}%
+   \fancyfoot[R]{Summer Semester 2020/21}%
+}
+
+% Add editorial note
+%\begin{teaserfigure}
+%	\parbox{\textwidth}{\centering\normalsize
+%		This article is an editorial note submitted to CCR. It has NOT been peer reviewed.\\
+%		The authors take full responsibility for this article's
+%		technical content. Comments can be posted through CCR Online.
+%	}
+%	\vspace{10pt}
+%\end{teaserfigure}
+
+\usepackage{balance}
+\usepackage{subcaption}
+
+\begin{document}
+
+\title{Reproducibility Report: Web Performance Pitfalls}
+
+\author{Curt Polack}
+\affiliation{
+	\institution{TU Munich, Germany}
+}
+\email{curt.polack@tum.de}
+
+\begin{abstract}
+	In this paper, we re-implement a work published in proceedings of the 20th International Conference for Passive and Active Measurement (PAM) in 2019: ``Web Performance Pitfalls''. The paper used a number of web-scraping and performance evaluation tools to perform measurements of ca. 2000 popular websites. These measurements were used to demonstrate and evaluate differences in measurements by tool, standard, etc. that can cause different and possibly misleading results in papers that examine web performance.
+	
+	This paper details the process of reproducing the original results and conclusions using the data and scripts provided in the original paper. It also details the use of the aforementioned scripts to perform a new set of measurements for ca. 1000 popular websites. The difficulties of obtaining new measurements and their results are expounded upon and the results compared with those of the original paper.
+	
+	The original data provided produced results that coincide with the results and plots in the original paper. The measurement scripts provided for Chrome and Firefox with Selenium did not work in either the environment used in the original paper or in a modern Linux environment. The measurements that were collected using Firefox with Marionette and analyzed by the scripts provided did, however, generate similar results to those produced by the original data regarding two major web performance metrics: load time and number of objects. The new measurement's results did not correspond to those of the original dataset regarding object counts. 
+\end{abstract}
+
+\begin{CCSXML}
+<ccs2012>
+	<concept>
+	<concept_id>10003033.10003079</concept_id>
+	<concept_desc>Networks~Network performance evaluation</concept_desc>
+	<concept_significance>500</concept_significance>
+	</concept>
+</ccs2012>
+\end{CCSXML}
+
+\begin{CCSXML}
+<ccs2012>
+	<concept>
+	<concept_id>10003033.10003079.10011704</concept_id>
+	<concept_desc>Networks~Network measurement</concept_desc>
+	<concept_significance>500</concept_significance>
+	</concept>
+</ccs2012>
+\end{CCSXML}
+
+\ccsdesc[500]{Networks~Network performance evaluation}
+\ccsdesc[500]{Networks~Network measurement}
+
+\keywords{Web performance, Measurement}
+
+\maketitle
+
+\input{include/introduction}
+\input{include/background}
+\input{include/reimplementation}
+%\input{include/datasets}
+\input{include/evaluation}
+\input{include/conclusion}
+
+%\begin{acks}
+%	The discussions leading to this editorial were initiated during
+%	Dagstuhl Seminar 15102 on
+%	\emph{Secure Routing for Future Communication Networks},
+%	and we thank all participants for their contributions.
+%\end{acks}
+
+{ \balance
+{
+	\bibliographystyle{ACM-Reference-Format}
+	%\bibliography{literature}
+\bibliography{paper}
+}
+}
+
+\end{document}
