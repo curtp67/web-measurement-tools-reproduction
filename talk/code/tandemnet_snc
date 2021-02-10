@@ -1,0 +1,11 @@
+# Configuration of Network
+# Interface configuration. Unit: Mbps
+I v1, FIFO, CR, 5
+I v2, FIFO, CR, 4.9
+I v3, FIFO, CR, 4.5
+
+EOI
+# Traffic configuration. Unit Mbps or Mb
+# One flow with the route v1->v2->v3 with priorities and characterization
+F F1, 3, v1:1, v2:1, v3:1, EXPONENTIAL, .3
+EOF

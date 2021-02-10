@@ -1,0 +1,93 @@
+@InProceedings{10.1007/978-3-030-15986-3_19,
+author="Enghardt, Theresa
+and Zinner, Thomas
+and Feldmann, Anja",
+editor="Choffnes, David
+and Barcellos, Marinho",
+title="Web Performance Pitfalls",
+booktitle="Passive and Active Measurement",
+year="2019",
+publisher="Springer International Publishing",
+address="Cham",
+pages="286--303",
+abstract="Web performance is widely studied in terms of load times, numbers of objects, object sizes, and total page sizes. However, for all these metrics, there are various definitions, data sources, and measurement tools. These often lead to different results and almost all studies do not provide sufficient details about the definition of metrics and the data sources they use. This hinders reproducibility as well as comparability of the results. This paper revisits the various definitions and quantifies their impact on performance results. To do so we assess Web metrics across a large variety of Web pages.",
+isbn="978-3-030-15986-3"
+}
+
+@InProceedings{10.1007/978-3-319-30505-9_17,
+author="Varvello, Matteo
+and Schomp, Kyle
+and Naylor, David
+and Blackburn, Jeremy
+and Finamore, Alessandro
+and Papagiannaki, Konstantina",
+editor="Karagiannis, Thomas
+and Dimitropoulos, Xenofontas",
+title="Is the Web HTTP/2 Yet?",
+booktitle="Passive and Active Measurement",
+year="2016",
+publisher="Springer International Publishing",
+address="Cham",
+pages="218--232",
+abstract="Version 2 of the Hypertext Transfer Protocol (HTTP/2) was finalized in May 2015 as RFC 7540. It addresses well-known problems with HTTP/1.1 (e.g., head of line blocking and redundant headers) and introduces new features (e.g., server push and content priority). Though HTTP/2 is designed to be the future of the web, it remains unclear whether the web will---or should---hop on board. To shed light on this question, we built a measurement platform that monitors HTTP/2 adoption and performance across the Alexa top 1 million websites on a daily basis. Our system is live and up-to-date results can be viewed at [1]. In this paper, we report findings from an 11Â month measurement campaign (NovemberÂ 2014 -- OctoberÂ 2015). As of October 2015, we find 68,000 websites reporting HTTP/2 support, of which about 10,000 actually serve content with it. Unsurprisingly, popular sites are quicker to adopt HTTP/2 and 31Â {\%} of the Alexa top 100 already support it. For the most part, websites do not change as they move from HTTP/1.1 to HTTP/2; current web development practices like inlining and domain sharding are still present. Contrary to previous results, we find that these practices make HTTP/2 more resilient to losses and jitter. In all, we find that 80Â {\%} of websites supporting HTTP/2 experience a decrease in page load time compared with HTTP/1.1 and the decrease grows in mobile networks.",
+isbn="978-3-319-30505-9"
+}
+
+@INPROCEEDINGS{6263888,  author={S. {Egger} and T. {Hossfeld} and R. {Schatz} and M. {Fiedler}},  booktitle={2012 Fourth International Workshop on Quality of Multimedia Experience},   title={Waiting times in quality of experience for web based services},   year={2012},  volume={},  number={},  pages={86-96},  doi={10.1109/QoMEX.2012.6263888}}
+
+@inproceedings{10.5555/2482626.2482671,
+author = {Wang, Xiao Sophia and Balasubramanian, Aruna and Krishnamurthy, Arvind and Wetherall, David},
+title = {Demystifying Page Load Performance with WProf},
+year = {2013},
+publisher = {USENIX Association},
+address = {USA},
+abstract = {Web page load time is a key performance metric that many techniques aim to reduce. Unfortunately, the complexity of modern Web pages makes it difficult to identify performance bottlenecks. We present WProf, a lightweight in-browser profiler that produces a detailed dependency graph of the activities that make up a page load. WProf is based on a model we developed to capture the constraints between network load, page parsing, JavaScript/CSS evaluation, and rendering activity in popular browsers. We combine WProf reports with critical path analysis to study the page load time of 350 Web pages under a variety of settings including the use of end-host caching, SPDY instead of HTTP, and the mod pagespeed server extension. We find that computation is a significant factor that makes up as much as 35{\%} of the critical path, and that synchronous JavaScript plays a significant role in page load time by blocking HTML parsing. Caching reduces page load time, but the reduction is not proportional to the number of cached objects, because most object loads are not on the critical path. SPDY reduces page load time only for networks with high RTTs and mod pagespeed helps little on an average page},
+booktitle = {Proceedings of the 10th USENIX Conference on Networked Systems Design and Implementation},
+pages = {473?486},
+numpages = {14},
+location = {Lombard, IL},
+series = {nsdi'13}
+}
+
+@inproceedings{10.1145/3278532.3278574,
+author = {Scheitle, Quirin and Hohlfeld, Oliver and Gamba, Julien and Jelten, Jonas and Zimmermann, Torsten and Strowes, Stephen D. and Vallina-Rodriguez, Narseo},
+title = {A Long Way to the Top: Significance, Structure, and Stability of Internet Top Lists},
+year = {2018},
+isbn = {9781450356190},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/3278532.3278574},
+doi = {10.1145/3278532.3278574},
+abstract = {A broad range of research areas including Internet measurement, privacy, and network security rely on lists of target domains to be analysed; researchers make use of target lists for reasons of necessity or efficiency. The popular Alexa list of one million domains is a widely used example. Despite their prevalence in research papers, the soundness of top lists has seldom been questioned by the community: little is known about the lists' creation, representativity, potential biases, stability, or overlap between lists.In this study we survey the extent, nature, and evolution of top lists used by research communities. We assess the structure and stability of these lists, and show that rank manipulation is possible for some lists. We also reproduce the results of several scientific studies to assess the impact of using a top list at all, which list specifically, and the date of list creation. We find that (i) top lists generally overestimate results compared to the general population by a significant margin, often even an order of magnitude, and (ii) some top lists have surprising change characteristics, causing high day-to-day fluctuation and leading to result instability. We conclude our paper with specific recommendations on the use of top lists, and how to interpret results based on top lists with caution.},
+booktitle = {Proceedings of the Internet Measurement Conference 2018},
+pages = {478?493},
+numpages = {16},
+location = {Boston, MA, USA},
+series = {IMC '18}
+}
+
+@misc{enghardt_2019, title={Web Measurement Tools}, url={https://github.com/theri/web-measurement-tools}, journal={Web Measurement Tools}, author={Enghardt, Theresa}, year={2019}, month={Jan}}
+
+@misc{har_format_2012, title={W3C Editor's Draft: HTTP Archive (HAR) format}, url={https://w3c.github.io/web-performance/specs/HAR/Overview.html}, journal={HTTP Archive (HAR) format}, year={2012}, month={Aug}}
+
+@misc{w3c_2020, title={Resource Timing Level 2}, url={https://www.w3.org/TR/resource-timing-2/}, journal={W3C}, year={2020}, month={Aug}}
+
+@misc{timing_2012, title={Navigation Timing}, url={https://www.w3.org/TR/navigation-timing/}, journal={Navigation Timing}, publisher={W3C}, year={2012}, month={Dec}}
+
+@inproceedings{10.1145/2940136.2940138,
+author = {Bocchi, Enrico and De Cicco, Luca and Rossi, Dario},
+title = {Measuring the Quality of Experience of Web Users},
+year = {2016},
+isbn = {9781450344258},
+publisher = {Association for Computing Machinery},
+address = {New York, NY, USA},
+url = {https://doi.org/10.1145/2940136.2940138},
+doi = {10.1145/2940136.2940138},
+abstract = {Measuring quality of Web users experience (WebQoE) faces the following trade-off. On the one hand, current practice is to resort to metrics, such as the document completion time (onLoad), that are simple to measure though knowingly inaccurate. On the other hand, there are metrics, like Google?s SpeedIndex, that are better correlated with the actual user experience, but are quite complex to evaluate and, as such, relegated to lab experiments. In this paper, we first provide a comprehensive state of the art on the metrics and tools available for WebQoE assessment. We then apply these metrics to a representative dataset (the Alexa top-100 webpages) to better illustrate their similarities, differences, advantages and limitations. We next introduce novel metrics, inspired by Google?s SpeedIndex, that (i) offer significant advantage in terms of computational complexity, (ii) while maintaining a high correlation with the SpeedIndex at the same time. These properties makes our proposed metrics highly relevant and of practical use.},
+booktitle = {Proceedings of the 2016 Workshop on QoE-Based Analysis and Management of Data Communication Networks},
+pages = {37?42},
+numpages = {6},
+keywords = {MOS, onLoad, SpeedIndex, TTFB, ByteIndex, Above-the-fold, TTFP, ObjectIndex, Quality of Experience, DOM},
+location = {Florianopolis, Brazil},
+series = {Internet-QoE '16}
+}
