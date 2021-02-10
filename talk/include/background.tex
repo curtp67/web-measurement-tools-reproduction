@@ -2,11 +2,11 @@
 
 \begin{frame}
     \frametitle{Important Metrics}
-	Three of the most common metrics for web performance in surveyed papers::
+	Three of the most common metrics for web performance in surveyed papers:
 	\begin{enumerate}
 	  \item \textbf{Load Time} - The time required for loading a web page correlates strongly with user experience \cite{6263888}. Page Load Time (PLT), defined as the time until the onLoad event, is most often used to measure page load times; there are, however, a number of other metrics.
-	  \item \textbf{Object Size} - Object size normally reflects the encoded size (i.e. the count of bytes transferred over the network) but can also reflect the decoded (i.e. decompressed) number of bytes. Byte Index refers to the integral of the total sizes of objects loaded over time and is an important metric for the size of objects \cite{10.1145/2940136.2940138}.
-	  \item \textbf{Object Count} - Since web pages are often constantly loading - even after the initial page load - object counts should only count objects loaded by the onLoad event. Calculating a count of the initial objects can be done using objects in the DOM or HTTP request-response pairs.
+	  \item \textbf{Object Size} - Object size normally reflects the encoded size (i.e. the count of bytes transferred over the network) but can also reflect the decoded (i.e. decompressed) number of bytes. Byte Index refers to the integral of the total sizes of objects loaded over time and is an important metric for objects \cite{10.1145/2940136.2940138}.
+	  \item \textbf{Object Count} - Calculating a count of the initial objects can be done using objects in the DOM or HTTP request-response pairs.
 	\end{enumerate}
 \end{frame}
 

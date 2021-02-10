@@ -15,13 +15,13 @@
 			Firefox & 62.0.2 / 61.0.2 & 84.0.2 \\
 			Chrome & 69 & 88 \\
 			Selenium & 3.14.0 & 3.141.59\\
-			Geckodriver & 0.21.0, & 0.29.0\\
+			Geckodriver & 0.21.0 & 0.29.0\\
 			HAR Export Trigger & 0.6.1 & 0.6.1\\
 			\bottomrule
 		\end{tabular}
 	\end{table}
 	
-Despite trying the versions specified in the original paper as well as the more modern versions, it was not possible to consistently extract HAR files using Firefox with Selenium and Chrome with PyDevTools as specified in the original paper.
+Despite trying the versions specified in the original paper as well as the more modern versions, \textbf{it was not possible to consistently extract HAR files using Firefox with Selenium and Chrome with PyDevTools as specified in the original paper}.
 
 $\boldsymbol{\rightarrow}$  This paper focused on reproducing measurements using Firefox with Marionette.
 \end{frame}
@@ -94,13 +94,13 @@ $\boldsymbol{\rightarrow}$  This paper focused on reproducing measurements using
 	\end{subfigure}%
 	 \begin{subfigure}{0.5\textwidth}
 	 \centering
-	\includegraphics[width=.8\linewidth,keepaspectratio]{Chrome_Plots/ecdf_rel_object_byte_index.pdf}
-	\caption{Original Measurements (Chrome Only)}
-	\label{fig:orig_chrome_relative_byte_index}
-	\par\medskip
 	\includegraphics[width=.8\linewidth,keepaspectratio]{Firefox Plots/ecdf_rel_object_byte_index.pdf}
 	\caption{Original Measurements (Firefox Only)}
 	\label{fig:orig_firefox_relative_byte_index}
+		\par\medskip
+		\includegraphics[width=.8\linewidth,keepaspectratio]{Chrome_Plots/ecdf_rel_object_byte_index.pdf}
+	\caption{Original Measurements (Chrome Only)}
+	\label{fig:orig_chrome_relative_byte_index}
 	\end{subfigure}
 \caption{Byte index: difference due to data source}
 \end{figure}
